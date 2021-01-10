@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/entryPage">
+
+    <fragment
+        android:id="@+id/entryPage"
+        android:name="com.hasanakcay.kotlinapp.view.EntryPage"
+        android:label="fragment_entry_page"
+        tools:layout="@layout/fragment_entry_page" >
+        <action
+            android:id="@+id/action_entryPage_to_detailPage"
+            app:destination="@id/detailPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPage"
+        android:name="com.hasanakcay.kotlinapp.view.DetailPage"
+        android:label="fragment_detail_page"
+        tools:layout="@layout/fragment_detail_page" >
+        <action
+            android:id="@+id/action_detailPage_to_albumsPage"
+            app:destination="@id/albumsPage" />
+        <action
+            android:id="@+id/action_detailPage_to_profilePage"
+            app:destination="@id/profilePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumsPage"
+        android:name="com.hasanakcay.kotlinapp.view.AlbumsPage"
+        android:label="fragment_albums_page"
+        tools:layout="@layout/fragment_albums_page" >
+        <action
+            android:id="@+id/action_albumsPage_to_albumsDetailPage"
+            app:destination="@id/albumsDetailPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePage"
+        android:name="com.hasanakcay.kotlinapp.view.ProfilePage"
+        android:label="fragment_profile_page"
+        tools:layout="@layout/fragment_profile_page" />
+    <fragment
+        android:id="@+id/albumsDetailPage"
+        android:name="com.hasanakcay.kotlinapp.view.AlbumsDetailPage"
+        android:label="fragment_albums_detail_page"
+        tools:layout="@layout/fragment_albums_detail_page" >
+        <argument
+            android:name="albumId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_albumsDetailPage_to_photoDetailPage"
+            app:destination="@id/photoDetailPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoDetailPage"
+        android:name="com.hasanakcay.kotlinapp.view.PhotoDetailPage"
+        android:label="fragment_photo_detail_page"
+        tools:layout="@layout/fragment_photo_detail_page" />
+</navigation>

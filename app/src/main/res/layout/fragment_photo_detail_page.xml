@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.PhotoDetailPage">
+
+    <ImageView
+        android:id="@+id/photoImg"
+        android:layout_width="212dp"
+        android:layout_height="243dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_launcher_background" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detailRecyclerView2"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/photoImg"
+        />
+
+</RelativeLayout>
